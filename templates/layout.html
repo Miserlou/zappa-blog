@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="icon" type="image/png" href="data:image/png;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAA
+AAAAAAAAAAAAenp6AOPj4wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAABAiIiIiIgEAABERERERAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAIgACIiIAAAAREAAREQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIiIiAAAAAAEREREA
+AAAAAAAAAAAAAAEAAAAAAAAQAAAAAAAAAACAAQAAIAQAAGAGAABgBgAAY/4AAHH+AABgBgAAYAYA
+AGAGAAB/HgAAf44AAGAGAABgBgAAYAYAAD/8AACAAQAA" />
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<!-- Custom styles for this template -->
+    <style>
+    /* Sticky footer styles
+    -------------------------------------------------- */
+    html {
+      position: relative;
+      min-height: 100%;
+    }
+    body {
+      /* Margin bottom by footer height */
+      margin-bottom: 60px;
+    }
+    .footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      /* Set the fixed height of the footer here */
+      height: 60px;
+      background-color: #f5f5f5;
+    }
+
+    h1, h2, h3, h4, p {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+    }
+
+    /* Custom page CSS
+    -------------------------------------------------- */
+    /* Not required for template or sticky footer method. */
+
+    .container-fluid {
+      padding: 0 15px;
+    }
+    .container-fluid .text-muted {
+      margin: 20px 0;
+    }
+
+    </style>
+
+  </head>
+  <body>
+
+        <div class="container-fluid">
+
+        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+        <div class="row">
+
+        <div class="col-xs-12 col-md-1"></div>
+
+        <div class="col-xs-12 col-md-6">{% block body %}{% endblock %}</div>
+
+        <div class="col-xs-12 col-md-2"></div>
+
+          <div class="col-xs-12 col-md-2">
+            <div class="page-header">
+                <h2>
+                    <a href="/" style="color: gray">
+                        <i>Zappatista!</i>
+                    </a>
+                </h2>
+            </div>
+
+            <p class="text-muted">
+                    News, announcements and commentary from <b><a href="https://github.com/Miserlou/Zappa">Zappa</a></b>, Python's server-less framework.
+            </p>
+
+            <p>
+                <a href="https://travis-ci.org/Miserlou/Zappa"><img src="https://camo.githubusercontent.com/892cb92b479135dfb624dbe1de6923f26e2f3969/68747470733a2f2f7472617669732d63692e6f72672f4d697365726c6f752f5a617070612e737667" alt="Build Status" data-canonical-src="https://travis-ci.org/Miserlou/Zappa.svg" style="max-width:100%;"></a>
+            </p>
+
+            <p>
+                <a href="https://pypi.python.org/pypi/zappa"><img src="https://camo.githubusercontent.com/e226aafbf919eae2fbe40b16e9c24b5a9b054fc0/68747470733a2f2f696d672e736869656c64732e696f2f707970692f762f5a617070612e737667" alt="PyPI" data-canonical-src="https://img.shields.io/pypi/v/Zappa.svg" style="max-width:100%;"></a>
+            </p>
+            <p>
+                <a href="https://slack.zappa.io/"><img src="https://camo.githubusercontent.com/0260a056b9174f80306bc03554d5d7d7edc23d11/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636861742d736c61636b2d6666363962342e737667" alt="Slack" data-canonical-src="https://img.shields.io/badge/chat-slack-ff69b4.svg" style="max-width:100%;"></a>
+            </p>
+
+            <p>
+                <!-- Place this tag where you want the button to render. -->
+                <a aria-label="Star Miserlou/Zappa on GitHub" data-count-aria-label="# stargazers on GitHub" data-count-api="/repos/Miserlou/Zappa#stargazers_count" data-count-href="/Miserlou/Zappa/stargazers" data-style="mega" data-icon="octicon-star" href="https://github.com/Miserlou/Zappa" class="github-button">Star</a>
+            </p>
+
+            <p>
+              <a href="https://gun.io"><img src="https://camo.githubusercontent.com/b664dc146e60153497166bacf0e800c2604da9c8/687474703a2f2f692e696d6775722e636f6d2f4d37774a6970522e706e67" alt="Made by Gun.io" data-canonical-src="http://i.imgur.com/M7wJipR.png" style="max-width:70%;"></a>
+            </p>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+      <div class="container-fluid">
+        <p class="text-muted pull-right">Powered by <i><a href="https://github.com/Miserlou/zappa-cms">zappa-cms</a></i>.</p>
+      </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+  </body>
+</html>
