@@ -21,7 +21,7 @@ As an alternative, ZBT can also use Amazon's DynamoDB as a database. This is a m
 
 ### Scalability
 
-With the training wheels taken off your AWS account, you should be able to handle 5,000 simultaneous connections per second, so with a 30-minute announce interval, this set-up should be able to handle 9,000,000 peers out of the box. With a multi-region deployment and a larger announce window, this should be able to scale to 100,000,000+ peers without much difficulty. Awesome!
+With the training wheels taken off your AWS account, you should be able to handle 5,000 simultaneous connections per second, so with a 30-minute announce interval, this set-up should be able to handle 9,000,000 peers out of the box. With a multi-region deployment and a larger announce window, this should be able to scale to 100,000,000+ peers without much difficulty. Awesome! Especially when you consider that the world's [top 5 largest trackers](https://torrentfreak.com/the-worlds-5-largest-public-bittorrent-trackers-100614/) combined only house 50 million peers!
 
 ### Future
 
