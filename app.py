@@ -31,24 +31,17 @@ def category(category="posts"):
         for filename in os.listdir(category):
             if 'index.md' in filename: 
                 continue
+            if filename[-3:] == '.py':
+                continue
             item = markdown2.markdown_path(category + '/' + filename, extras=["metadata"])
             item.metadata['slug'] = filename.split('/')[-1].replace('.md', '')
             items.append(item)
 
         # Then do the index
-        path = category + '/index.md'
-        html = markdown2.markdown_path(path, extras=["metadata"])
+        template = 'templates/category.html'
 
-        metadata = html.metadata
-        if 'template' in metadata.keys():
-            template = metadata['template']
-        else:
-            template = 'templates/category.html'
-
-        render_data = metadata.copy()
-        render_data[u'body'] = html
-        render_data[u'items'] = sorted(items, key=lambda item: item.metadata['date_created'], reverse=True)
-        render_data[u'category'] = category
+        render_data = {}
+        render_data[u'items'] = sorted(items, key=lambda item: item.metadata.get('date_created', ''), reverse=True)
 
         rendered = jenv.get_template(template).render(render_data)
         return rendered
