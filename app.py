@@ -41,6 +41,8 @@ def category(category="posts"):
         template = 'templates/category.html'
 
         render_data = {}
+        render_data[u'title'] = 'Zappatista! The Zappa Blog'
+        render_data[u'category'] = 'posts'
         render_data[u'items'] = sorted(items, key=lambda item: item.metadata.get('date_created', ''), reverse=True)
 
         rendered = jenv.get_template(template).render(render_data)
