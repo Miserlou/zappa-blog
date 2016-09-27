@@ -4,12 +4,14 @@
 
 <ul>
 {% for item in items %}
-    <h2>
         <li>
-
+    	<h3>
             <a href="{{category}}/{{item.metadata.slug}}">{{ item.metadata.title }}</a>
+        </h3>
+	<ul>
+             <li><b>{{item.metadata.author}}</b>, <i>{{item.metadata.date_created}}</i>.</li>
+        </ul>
         </li>
-    </h2>
 {% endfor %}
 </ul>
 
