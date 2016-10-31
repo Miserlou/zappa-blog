@@ -1,4 +1,9 @@
-# Continuous Zappa Deployments with Travis
+---
+title: Continuous Zappa Deployments with Travis
+author: Jannis Gebauer
+date_created: 10-31-2016
+format: markdown
+---
 
 First of all, what is a Continuous Deployment? To make things short, it's basically just a fancy term telling you to push your code quickly, as soon as it's ready.
 
