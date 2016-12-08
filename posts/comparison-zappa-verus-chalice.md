@@ -5,7 +5,7 @@ date_created: 11-17-2016
 format: markdown
 ---
 
-_On July 11, 2016, 6 months after the first published version of [Zappa](https://github.com/Miserlou/Zappa), Amazon announced the preview release of [Chalice, now the Python Severless Microframework for AWS](https://aws.amazon.com/blogs/developer/preview-the-python-serverless-microframework-for-aws/). This was a fairly big shock to our community at the time, as it looked as though our Free and Open Source project was being undercut by Amazon's propietary offering. Not only that, but it felt like their interface and even their presentation of the product was a direct rip-off of our efforts, potentially designed to trick consumers and lock them into the AWS ecosystem._
+_On July 11, 2016, 6 months after the first published version of [Zappa](https://github.com/Miserlou/Zappa), Amazon announced the preview release of [Chalice, now the Python Severless Microframework for AWS](https://aws.amazon.com/blogs/developer/preview-the-python-serverless-microframework-for-aws/). This was a fairly big shock to our community at the time, as it looked as though our Free and Open Source project was being undercut by Amazon's propietary offering. Not only that, but it felt like their interface and even their presentation of the product was a̶ ̶d̶i̶r̶e̶c̶t̶ ̶r̶i̶p̶-̶o̶f̶f̶ ̶o̶f̶ inspired by our efforts, potentially designed to ~~~trick~~~ help consumers and lock them into the AWS ecosystem._
 
 I don't want to attribute any direct malice there, (this is probably just a case of a good idea being executed in multiple ways), _but_ Amazon does have a fairly long history of building their own proprietary or locked-in versions of software products and services built on top of AWS infrastructure.
 
