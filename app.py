@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 
 from flask import Flask, request, render_template
-
-from datetime import datetime, timedelta
 from jinja2 import Environment, FileSystemLoader
-import markdown2
 
+from dateutil.parser import parse
+from datetime import datetime, timedelta
+
+import markdown2
 import os
 
 app = Flask(__name__)
@@ -43,7 +44,7 @@ def category(category="posts"):
         render_data = {}
         render_data[u'title'] = 'Zappatista! The Zappa Blog'
         render_data[u'category'] = 'posts'
-        render_data[u'items'] = sorted(items, key=lambda item: item.metadata.get('date_created', ''), reverse=True)
+        render_data[u'items'] = sorted(items, key=lambda item: parse(item.metadata.get('date_created', '')), reverse=True)
 
         rendered = jenv.get_template(template).render(render_data)
         return rendered
