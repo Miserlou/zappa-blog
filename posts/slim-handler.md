@@ -6,7 +6,7 @@ format: markdown
 ---
 
 
-Over the past year, Zappa users has been creating and migrating web applications to AWS API Gateway / Lambda by using Zappa. The limitations on the projects that we can launch on Lambda are [limited](http://docs.aws.amazon.com/lambda/latest/dg/limits.html) by AWS however. The major limitation that we have run into is when the packaged application, with all its dependencies, hits the 50M zip limit for the lambda handler. 
+Over the past year, Zappa users have been creating and migrating web applications to AWS API Gateway / Lambda by using Zappa. The limitations on the projects that we can launch on Lambda are [limited](http://docs.aws.amazon.com/lambda/latest/dg/limits.html) by AWS however. The major limitation that we have run into is when the packaged application, with all its dependencies, hits the 50M zip limit for the lambda handler. 
 
 We have seen this in the community as people try to [finagle large libraries like scikit-learn](https://serverlesscode.com/post/deploy-scikitlearn-on-lamba/) into a lambda function. It is not easy to get everything under 50M when trying to leverage certain libraries. 
 
