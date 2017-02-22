@@ -1,24 +1,24 @@
 ---
-title: One Line Deployments 
+title: Simplified AWS Lambda Deployments with Docker and Zappa
 author: Matthew Crowson
 date_created: 02-21-2017
 format: markdown
 ---
 
-Updating your projects hosted on AWS Lambda via Zappa is as easy as calling
- `zappa update`. Zappa takes the python packages installed into your virtual
- environment and sends them and your project up to Lambda. Boom! Your code
- is now updated. 
+Updating your project hosted on AWS Lambda via Zappa is as easy as calling 
+`zappa update`. Zappa takes the Python packages installed into your virtual 
+environment and sends them and your project up to Lambda. Boom! Your code 
+is now updated. 
  
 ### The problem with environments
-The lambda working environment and operating system is often different 
-than your developer working environment. So the python packages in your 
+The Lambda working environment and operating system is often different 
+than your developer working environment. So the Python packages in your 
 virtual environment might be built perfectly for your local needs on 
 MacBook or your super sweet Windows XP desktop. Depending on the package 
-though it may have a difficult time running in AWS Lambda. 
+though, it may have a difficult time running in AWS Lambda. 
 
 ### Enter Docker
-The blessed souls over at Lambci have released a [Docker image](https://github.com/lambci/docker-lambda) 
+The blessed souls over at LambCI have released a [Docker image](https://github.com/lambci/docker-lambda) 
 that looks, smells and sounds like the AWS Lambda environment. This 
 means we can `pip install` to our heart's content and know that the packages 
 will run in Lambda. The only sad part is that this Lambda environment 
@@ -26,10 +26,10 @@ is pretty bare bones (just like the real lambda) and might not have
 all of the OS packages needed for us to even install the Python packages.
 
 ### [@danielwhatmuff](https://github.com/danielwhatmuff) Saves the Day
-Building off of Lambci's Docker image, Daniel Whatmuff has constructed 
+Building off of LambCI's Docker image, Daniel Whatmuff has constructed 
 a new [Dockerfile](https://github.com/danielwhatmuff/zappa) for us 
 that installs some of these missing dependencies. All that was left 
-was to build it and put it on [Docker Hub](https://hub.docker.com/r/mcrowson/zappa-builder/) 
+was to build the image and put it on [Docker Hub](https://hub.docker.com/r/mcrowson/zappa-builder/) 
 for reuse.
 
 ### One Line Deployment 
@@ -47,5 +47,5 @@ We do a few things when we call this command.
  
 Your project is now updated and the updated packages are Lambda compatible! 
 If you're environment is still unable to pip install certain Python packages, 
-you may need to build your own Docker image similar to how [@danielwhatmuff[([Dockerfile](https://github.com/danielwhatmuff/zappa))
+you may need to build your own Docker image similar to how [@danielwhatmuff]([Dockerfile](https://github.com/danielwhatmuff/zappa))
 built the one we are working with here, but inclusive of your missing system depdendencies. 
