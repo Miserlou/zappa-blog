@@ -14,8 +14,10 @@ is now updated.
 The Lambda working environment and operating system is often different 
 than your developer working environment. So the Python packages in your 
 virtual environment might be built perfectly for your local needs on 
-MacBook or your super sweet Windows XP desktop. Depending on the package 
-though, it may have a difficult time running in AWS Lambda. 
+MacBook or your super sweet Windows XP desktop. Zappa will try to automatically
+use pre-compiled [lambda-packages](https://github.com/Miserlou/lambda-packages) or
+"manylinux" wheels on pip, but that doesn't yet cover all packages you might need,
+especially if you're customizing them.
 
 ### Enter Docker
 The blessed souls over at LambCI have released a [Docker image](https://github.com/lambci/docker-lambda) 
