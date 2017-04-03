@@ -23,7 +23,13 @@ Crucial configurations for PgBouncer are:
 
 ```
 pool_mode=transaction  # Server is released back to pool after transaction finishes. default: session
+```
+
+```
 max_client_conn=2000  # We'll need something high for all lambda containers. default: 100
+```
+
+```
 default_pool_size=20  # Depending on the size of your DB you can increase this. default: 20
 ```
 
