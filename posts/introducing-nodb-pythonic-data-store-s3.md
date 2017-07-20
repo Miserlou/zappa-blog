@@ -5,7 +5,7 @@ date_created: 04-10-2017
 format: markdown
 ---
 
-<img src="http://i.imgur.com/ZymFZd8.jpg" width="400"/>
+<img src="https://i.imgur.com/ZymFZd8.jpg" width="400"/>
 
 New project!
 
@@ -27,7 +27,7 @@ Here's the same example, but with a class. Note the import and configuration is 
 
 <script src="https://gist.github.com/Miserlou/4991ecaacad899d2c075315a85f665fc.js"></script>
 
-You should read the [README file](https://github.com/Miserlou/NoDB) for more information about how to use different serializers and other more advanced features.
+Note that this is _insecure by default_, as it's using Python's `pickle` under the hood. You should read the [README file](https://github.com/Miserlou/NoDB) for more information about how to use different serializers like `JSON` and other more advanced features.
 
 ### But.. why?
 
@@ -38,9 +38,11 @@ I can see a few use cases for **NoDB**:
 * Prototyping schemas
 * Storing API event responses for later replay
 * Capturing event logs
+* Storing simple form data (email addresses, etc.)
 * Storing non-relational analytics data
 * Firing Lambda event triggers
 * Version controlling evolving Python objects
+* Storing and loading trained machine learning models
 
 Mostly, I'm using **NoDB** to prototype a microservice that I don't know what the final schema will be yet. Once I've built that out fully, it should be easy to switch over to something with a schema built on top of Capless' [K.E.V.](https://github.com/capless/kev), which adds a schema and relational layer on top of this server-less database philosophy.
 
