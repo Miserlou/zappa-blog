@@ -23,16 +23,12 @@ Add to your installed apps:
 
 Then, in your Django project's `settings.py` file, add the following:
 
-```python
-DATABASES = {
-    'default': {
-        'ENGINE': 'zappa_django_utils.db.backends.s3sqlite',
-        'NAME': 'sqlite.db',
-        'BUCKET': 'your-db-bucket'
-    }
-}
-```
+<script src="https://gist.github.com/Miserlou/8a17a9551ebc289c74137b0c78619c0c.js"></script>
+
 And.. that's it!
 
+This is a pretty quick hack, but I have some ideas about ways that can significantly improve this that I hope to implement in the not-too-distant future, so stay tuned for that.
+
 Enjoy!
+
 Rich
